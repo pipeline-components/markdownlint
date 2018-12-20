@@ -1,9 +1,5 @@
 FROM ruby:2.5.3-alpine3.8 as build
 
-# Ignore dependecies, they are for support only
-# hadolint ignore=DL3018
-#RUN apk add --no-cache make build-base
-
 WORKDIR /app/
 COPY app /app/
 RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --standalone
