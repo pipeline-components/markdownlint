@@ -2,7 +2,9 @@ FROM ruby:2.5.3-alpine3.8 as build
 
 WORKDIR /app/
 COPY app /app/
-RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --standalone
+RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --standalone --clean --verbose
+# Because --no-cache is broken https://github.com/bundler/bundler/issues/6680
+RUN rm -rf  vendor/bundle/ruby/*/cache
 
 # app image
 FROM ruby:2.5.3-alpine3.8 as app
