@@ -19,9 +19,6 @@ ARG BUILD_REF
 
 # Labels
 LABEL \
-
-# Labels
-LABEL \
     maintainer="Robbert Müller <spam.me@grols.ch>" \
     org.label-schema.description="Markdownlint in a container for gitlab-ci" \
     org.label-schema.build-date=${BUILD_DATE} \
