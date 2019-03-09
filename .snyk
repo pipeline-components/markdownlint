@@ -5,5 +5,4 @@ ignore:
   SNYK-LINUX-PROCPS-175184:
     - '*':
         reason: None Given
-        expires: 2019-03-04T19:12:29.339Z
 patch: {}
