@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-alpine3.8 as build
+FROM ruby:2.6.4-alpine3.10 as build
 
 WORKDIR /app/
 COPY app /app/
@@ -7,13 +7,13 @@ RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --stand
 RUN rm -rf  vendor/bundle/ruby/*/cache
 
 # app image
-FROM ruby:2.6.3-alpine3.8
+FROM ruby:2.6.4-alpine3.10
 WORKDIR /app/
 COPY --from=build /app/ /app/
 ENV PATH "${PATH}:/app/bin/"
 
 # Add git to support the mdl '--git-recurse' option
-RUN apk add --no-cache git=2.18.1-r0
+RUN apk add --no-cache git=2.22.0-r0
 
 WORKDIR /code/
 # Build arguments
