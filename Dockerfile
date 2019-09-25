@@ -12,6 +12,9 @@ WORKDIR /app/
 COPY --from=build /app/ /app/
 ENV PATH "${PATH}:/app/bin/"
 
+# Add git to support the mdl '--git-recurse' option
+RUN apk add --no-cache git=2.18.1-r0
+
 WORKDIR /code/
 # Build arguments
 ARG BUILD_DATE
