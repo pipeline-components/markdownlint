@@ -1,4 +1,4 @@
-FROM ruby:2.6.4-alpine3.10 as build
+FROM ruby:2.6.5-alpine3.10 as build
 
 WORKDIR /app/
 COPY app /app/
@@ -7,7 +7,7 @@ RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --stand
 RUN rm -rf  vendor/bundle/ruby/*/cache
 
 # app image
-FROM ruby:2.6.4-alpine3.10
+FROM ruby:2.6.5-alpine3.10
 WORKDIR /app/
 COPY --from=build /app/ /app/
 ENV PATH "${PATH}:/app/bin/"
