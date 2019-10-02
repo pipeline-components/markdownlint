@@ -7,7 +7,13 @@ RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --stand
 RUN rm -rf  vendor/bundle/ruby/*/cache
 
 # app image
+FROM pipelinecomponents/base-entrypoint:0.1.0 as entrypoint
+
 FROM ruby:2.6.4-alpine3.10
+COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+ENV DEFAULTCMD mdl
+
 WORKDIR /app/
 COPY --from=build /app/ /app/
 ENV PATH "${PATH}:/app/bin/"
