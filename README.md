@@ -15,7 +15,7 @@
 ## Usage
 
 The image is for running markdownlint, markdownlint is installed in /app/ in case you need to customize the install before usage.
-The image is based on ruby:2.5.3-alpine3.8
+The image is based on ruby:2.6.5-alpine3.10
 
 More information about rules and configuration could be found here: [Docs][markdownlint]
 

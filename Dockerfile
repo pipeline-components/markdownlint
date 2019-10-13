@@ -1,4 +1,4 @@
-FROM ruby:2.6.4-alpine3.10 as build
+FROM ruby:2.6.5-alpine3.10 as build
 
 WORKDIR /app/
 COPY app /app/
@@ -9,7 +9,7 @@ RUN rm -rf  vendor/bundle/ruby/*/cache
 # app image
 FROM pipelinecomponents/base-entrypoint:0.1.0 as entrypoint
 
-FROM ruby:2.6.4-alpine3.10
+FROM ruby:2.6.5-alpine3.10
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD mdl
