@@ -7,7 +7,7 @@ RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --stand
 RUN rm -rf  vendor/bundle/ruby/*/cache
 
 # app image
-FROM pipelinecomponents/base-entrypoint:0.1.1 as entrypoint
+FROM pipelinecomponents/base-entrypoint:0.2.0 as entrypoint
 
 FROM ruby:2.6.5-alpine3.10
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
