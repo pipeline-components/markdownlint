@@ -1,5 +1,5 @@
 ---
-name: 'markdownlint'
+name: 'pipeline-components-markdownlint'
 description: 'markdownlint by Pipeline Components'
 author: 'Robbert Müller <spam.me@grols.ch>'
 branding:
