@@ -24,7 +24,7 @@ More information about rules and configuration could be found here: [Docs][markd
 ```yaml
 markdownlint:
   stage: linting
-  image: pipelinecomponents/markdownlint:latest
+  image: registry.gitlab.com/pipeline-components/markdownlint:latest
   script:
     - mdl --style all --warnings .
 ```
