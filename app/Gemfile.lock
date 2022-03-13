@@ -29,7 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mdl (~> 0.7)!
+  mdl (~> 0.11.0)!
 
 BUNDLED WITH
    2.3.7
