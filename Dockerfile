@@ -1,4 +1,4 @@
-FROM ruby:2.7.1-alpine3.10 as build
+FROM ruby:3.1.1-alpine3.15 as build
 
 WORKDIR /app/
 COPY app /app/
@@ -9,7 +9,7 @@ RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --stand
 # app image
 FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 
-FROM ruby:2.7.1-alpine3.10
+FROM ruby:3.1.1-alpine3.15
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD mdl
@@ -19,7 +19,8 @@ COPY --from=build /app/ /app/
 ENV PATH "${PATH}:/app/bin/"
 
 # Add git to support the mdl '--git-recurse' option
-RUN apk add --no-cache git=2.22.5-r0
+# hadolint ignore=DL3018
+RUN apk add --no-cache git
 
 WORKDIR /code/
 # Build arguments
