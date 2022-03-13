@@ -8,7 +8,7 @@ RUN \
     bundle config set --global frozen 'true' && \
     bundle install --binstubs=/app/bin/ --standalone --verbose && \
 # Because --no-cache is broken https://github.com/bundler/bundler/issues/6680
-    rm -rf  vendor/bundle/ruby/*/cache
+    rm -rf  bundle/ruby/*/cache
 
 # app image
 FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
