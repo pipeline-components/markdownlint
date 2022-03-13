@@ -2,7 +2,11 @@ FROM ruby:3.1.1-alpine3.15 as build
 
 WORKDIR /app/
 COPY app /app/
-RUN bundle install --frozen --deployment --binstubs=/app/bin/ --no-cache --standalone --clean --verbose && \
+RUN \
+    bundle config set --global clean 'true' && \
+    bundle config set --global deployment 'true' && \
+    bundle config set --global frozen 'true' && \
+    bundle install --binstubs=/app/bin/ --standalone --verbose && \
 # Because --no-cache is broken https://github.com/bundler/bundler/issues/6680
     rm -rf  vendor/bundle/ruby/*/cache
 
