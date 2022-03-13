@@ -1,7 +1,12 @@
 GEM
+  specs:
+
+GEM
   remote: https://rubygems.org/
   specs:
-    chef-utils (16.11.7)
+    chef-utils (17.9.52)
+      concurrent-ruby
+    concurrent-ruby (1.1.9)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -17,7 +22,7 @@ GEM
       tomlrb
     mixlib-shellout (3.2.5)
       chef-utils
-    rexml (3.2.4)
+    rexml (3.2.5)
     tomlrb (2.0.1)
 
 PLATFORMS
@@ -27,4 +32,4 @@ DEPENDENCIES
   mdl (~> 0.7)!
 
 BUNDLED WITH
-   2.1.4
+   2.3.7
