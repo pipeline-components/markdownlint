@@ -6,7 +6,7 @@ GEM
   specs:
     chef-utils (18.1.0)
       concurrent-ruby
-    concurrent-ruby (1.2.0)
+    concurrent-ruby (1.2.2)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
