@@ -4,9 +4,9 @@ GEM
 GEM
   remote: https://rubygems.org/
   specs:
-    chef-utils (18.4.12)
+    chef-utils (18.5.0)
       concurrent-ruby
-    concurrent-ruby (1.2.3)
+    concurrent-ruby (1.3.4)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -20,9 +20,9 @@ GEM
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
-    mixlib-shellout (3.2.7)
+    mixlib-shellout (3.3.3)
       chef-utils
-    rexml (3.2.6)
+    rexml (3.3.8)
     tomlrb (2.0.3)
 
 PLATFORMS
