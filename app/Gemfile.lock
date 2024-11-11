@@ -20,7 +20,7 @@ GEM
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
-    mixlib-shellout (3.3.3)
+    mixlib-shellout (3.3.4)
       chef-utils
     rexml (3.3.9)
     tomlrb (2.0.3)
