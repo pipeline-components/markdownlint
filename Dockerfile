@@ -1,4 +1,4 @@
-FROM ruby:3.4.5-alpine3.21 as build
+FROM ruby:3.4.5-alpine3.22 as build
 
 WORKDIR /app/
 COPY app /app/
@@ -13,7 +13,7 @@ RUN \
 # app image
 FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 
-FROM ruby:3.4.5-alpine3.21
+FROM ruby:3.4.5-alpine3.22
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD mdl
