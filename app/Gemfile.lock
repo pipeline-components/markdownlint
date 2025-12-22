@@ -23,7 +23,7 @@ GEM
     mixlib-shellout (3.3.9)
       chef-utils
     rexml (3.4.4)
-    tomlrb (2.0.3)
+    tomlrb (2.0.4)
 
 PLATFORMS
   ruby
