@@ -7,8 +7,8 @@ GEM
     chef-utils (18.9.4)
       concurrent-ruby
     concurrent-ruby (1.3.6)
-    kramdown (2.5.1)
-      rexml (>= 3.3.9)
+    kramdown (2.5.2)
+      rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     mdl (0.15.0)
@@ -20,7 +20,7 @@ GEM
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
-    mixlib-shellout (3.3.9)
+    mixlib-shellout (3.4.10)
       chef-utils
     rexml (3.4.4)
     tomlrb (2.0.4)
