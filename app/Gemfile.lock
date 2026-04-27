@@ -4,7 +4,7 @@ GEM
 GEM
   remote: https://rubygems.org/
   specs:
-    chef-utils (19.2.12)
+    chef-utils (19.2.110)
       concurrent-ruby
     concurrent-ruby (1.3.6)
     kramdown (2.5.2)
