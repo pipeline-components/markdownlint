@@ -11,7 +11,7 @@ GEM
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    mdl (0.16.0)
+    mdl (0.17.0)
       kramdown (~> 2.5)
       kramdown-parser-gfm (~> 1.1)
       mixlib-cli
@@ -29,7 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mdl (~> 0.16.0)!
+  mdl (~> 0.17.0)!
 
 BUNDLED WITH
    2.3.7
