@@ -11,12 +11,13 @@ GEM
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    mdl (0.17.0)
+    mdl (0.18.1)
       kramdown (~> 2.5)
       kramdown-parser-gfm (~> 1.1)
       mixlib-cli
       mixlib-config
       mixlib-shellout
+      uri
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
@@ -24,12 +25,13 @@ GEM
       chef-utils
     rexml (3.4.4)
     tomlrb (2.0.4)
+    uri (1.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  mdl (~> 0.17.0)!
+  mdl (~> 0.18.0)!
 
 BUNDLED WITH
    2.3.7
